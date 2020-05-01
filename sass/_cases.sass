@@ -27,6 +27,8 @@
   &:nth-child(2n+2)
     margin-right: 0
 
+
+
 .cases-block__tags
   margin-bottom: 24px
 
@@ -57,8 +59,12 @@
     margin-left: 7px
     -webkit-transition: -webkit-filter .1s
     transition: -webkit-filter .1s
-    transition: filter .1s
-    transition: filter 0.1s, -webkit-filter 0.1s
+    transition: .1s
+    transition: 0.1s
+    display: inline-block 
+    &.img-white
+      display: none 
+      
 
 .cases-block:hover
   background-color: #c42185
@@ -72,8 +78,13 @@
     color: #fff
 
     img
-      -webkit-filter: invert(100%)
-      filter: invert(100%)
+      display: none
+      &.img-white
+        display: inline-block
+        margin-bottom: -2px
+    
+      // -webkit-filter: invert(100%)
+      // filter: invert(100%)
 
 .cases-text
   padding: 77px 27px 35px 23px
@@ -81,9 +92,8 @@
   text-align: left
 
 .cases-img
+  height: 330px
   max-height: 330px
-  height: 100%
-  min-height: 330px
   -ms-flex-preferred-size: 340px
   flex-basis: 340px
   width: 340px
@@ -91,8 +101,24 @@
   img
     border-radius: 15px 0 0 15px
     max-height: 330px
-    min-height: 330px
     height: 100%
+
+
+@media ( max-width: 768px  )
+  .cases-img 
+    height: 290px
+    max-height: 290px
+    img 
+      height: 290px
+      max-height: 290px
+
+@media ( max-width: 426px  )
+  .cases-img 
+    height: 190px
+    max-height: 190px
+    img 
+      max-height: 190px
+      height: 190px
 
 .cases-container
   z-index: 0
@@ -157,6 +183,7 @@
     img
       width: 12px
 
+
   .cases-text
     padding-top: 22px
     min-width: auto
@@ -209,8 +236,7 @@
     /* position: relative;
     bottom: 2px !important
 
-  .cases-img
-    max-height: 182px
+
 
 @media screen and (max-width: 577px)
   .cases

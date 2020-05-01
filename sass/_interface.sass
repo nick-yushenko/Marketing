@@ -68,16 +68,9 @@
       right: 0
       z-index: -1
 
-    img
-      -webkit-filter: brightness(10)
-      filter: brightness(10)
-
   img
-    margin-left: 10px
-    -webkit-transition: -webkit-filter .1s
-    transition: -webkit-filter .1s
-    transition: filter .1s
-    transition: filter 0.1s, -webkit-filter 0.1s
+    margin-left: 12px
+
 
 .section__title
   font-size: 70px
@@ -171,3 +164,17 @@
 
   .form__btn
     font-size: 14px
+
+
+.read-block__arrow.img-white 
+  // margin-left: -14px 
+  position: absolute
+  top: calc(50% - 4px)
+  right: 50px 
+  display: none
+.btn:hover 
+  .img-white 
+    transition: 1s
+    display: inline-block
+
+

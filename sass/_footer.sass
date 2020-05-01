@@ -59,11 +59,18 @@
     -webkit-transition: background-color .3s
     transition: background-color 0.3s
 
+
     img
       -webkit-transition: -webkit-filter .3s
       transition: -webkit-filter .3s
       transition: filter .3s
       transition: filter 0.3s, -webkit-filter 0.3s
+      &:nth-child(1)
+        display: block
+      &:nth-child(2)
+        display: none
+    
+
 
     &:nth-child(1) img
       width: 9px
@@ -81,8 +88,13 @@
       background-color: #fff
 
       img
-        -webkit-filter: brightness(0)
-        filter: brightness(0)
+        // -webkit-filter: brightness(0)
+        // filter: brightness(0)
+        &:nth-child(1)
+          display: none
+        &.img-black
+          display: block
+    
 
 .footer__privacy
   display: -webkit-box
