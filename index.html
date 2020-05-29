@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marketing</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css?v=1">
 </head>
 
 <body>
@@ -123,8 +123,9 @@
 
         <div class="cases-container swiper-container">
           <div class="cases-wrap swiper-wrapper">
-
-            <div class="cases-block swiper-slide">
+            <!-- На каждой странице классы у слайдера должны быть РАЗНЫЕ. (Cases-block, cases-pagination, cases-container,cases-wrap  ) -->
+            <!-- Копирование данного слайдера с последующим изменением стилей приводит ко поломкам  -->
+            <div class="cases-block cases-block__index swiper-slide">
 
               <div class="cases-img"><img src="img/cases/cases_1.jpg" alt=""></div>
 
@@ -145,7 +146,7 @@
               </div>
             </div>
 
-            <div class="cases-block swiper-slide">
+            <div class="cases-block cases-block__index swiper-slide">
               <div class="cases-img"><img src="img/cases/cases_2.jpg" alt=""></div>
 
               <div class="cases-text">
@@ -162,7 +163,7 @@
               </div>
             </div>
 
-            <div class="cases-block swiper-slide">
+            <div class="cases-block cases-block__index swiper-slide">
 
               <div class="cases-img"><img src="img/cases/cases_1.jpg" alt=""></div>
 
@@ -183,7 +184,7 @@
               </div>
             </div>
 
-            <div class="cases-block swiper-slide">
+            <div class="cases-block cases-block__index swiper-slide">
               <div class="cases-img"><img src="img/cases/cases_2.jpg" alt=""></div>
 
               <div class="cases-text">
@@ -201,7 +202,7 @@
             </div>
 
           </div>
-          <div class="cases-pagination swiper-pagination"></div>
+          <div class="cases-pagination swiper-pagination cases-pagination__index"></div>
         </div>
 
         <a href="#" class="face-text__btn_hidden btn">Все проекты
@@ -476,7 +477,7 @@
 
   </main>
 
-  <script src="js/main.min.js"></script>
+  <script src="js/main.min.js?v=1"></script>
 </body>
 
 </html>
